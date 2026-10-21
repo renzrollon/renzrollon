@@ -1,0 +1,54 @@
+name: Update README
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - tools/update-readme.mjs
+      - .github/workflows/update-readme.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Refresh the recent-releases block
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node tools/update-readme.mjs
+
+      - name: Commit when the block changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- README.md; then
+            echo "README unchanged"
+          else
+            git add README.md
+            git commit -m "Update recent releases"
+            git push
+          fi
+
+      # GitHub disables scheduled workflows in public repositories after 60 days without
+      # repository activity. An empty commit after 50 quiet days keeps this one running.
+      - name: Keep the schedule alive
+        run: |
+          last=$(git log -1 --format=%ct)
+          age=$(( ( $(date +%s) - last ) / 86400 ))
+          if [ "$age" -ge 50 ]; then
+            git commit --allow-empty -m "Keep the scheduled workflow alive"
+            git push
+          else
+            echo "last commit ${age} day(s) ago"
+          fi
