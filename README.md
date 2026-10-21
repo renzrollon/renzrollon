@@ -1,9 +1,5 @@
 <a href="https://renzrollon.github.io/">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg">
-    <img src="assets/banner-dark.svg" width="100%" alt="Carl Rollon, Expert Software Engineer and Delivery Lead, Singapore. CV at renzrollon.github.io">
-  </picture>
+  <img src="assets/banner.webp" width="100%" alt="Carl Rollon, Expert Software Engineer and Delivery Lead, Singapore. CV at renzrollon.github.io">
 </a>
 
 I lead engineering teams and build the harness that lets them ship from a spec. 14+ years of enterprise and AI-enabled platforms in regulated industries; Expert Software Engineer & Delivery Lead at Zühlke, Singapore. Lately: tooling that gives coding agents one human checkpoint and nothing to ask after it.

@@ -2,12 +2,8 @@
   "name": "renzrollon-profile",
   "private": true,
   "type": "module",
-  "description": "Source of the github.com/renzrollon profile README: the banner builder and the release-list updater.",
+  "description": "Source of the github.com/renzrollon profile README and its release-list updater.",
   "scripts": {
-    "banner": "node tools/build-banner.mjs",
     "releases": "node tools/update-readme.mjs"
-  },
-  "devDependencies": {
-    "opentype.js": "1.3.4"
   }
 }
