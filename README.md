@@ -16,7 +16,7 @@ spec → [Checkpoint](https://github.com/renzrollon/checkpoint) (you read it on 
 ## Recent releases
 
 <!-- releases:start -->
-- [interlock v1.9.0](https://github.com/renzrollon/interlock/releases/tag/v1.9.0) · 2026-10-25
+- [interlock v1.11.0](https://github.com/renzrollon/interlock/releases/tag/v1.11.0) · 2026-10-27
 - [shippable-skills v0.1.0](https://github.com/renzrollon/shippable-skills/releases/tag/v0.1.0) · 2026-08-21
 <!-- releases:end -->
 
