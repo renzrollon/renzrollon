@@ -16,8 +16,8 @@ spec → [Checkpoint](https://github.com/renzrollon/checkpoint) (you read it on 
 ## Recent releases
 
 <!-- releases:start -->
+- [shippable-skills v0.2.1](https://github.com/renzrollon/shippable-skills/releases/tag/v0.2.1) · 2026-11-24
 - [interlock v1.19.0](https://github.com/renzrollon/interlock/releases/tag/v1.19.0) · 2026-11-19
-- [shippable-skills v0.1.0](https://github.com/renzrollon/shippable-skills/releases/tag/v0.1.0) · 2026-08-21
 <!-- releases:end -->
 
 ## How I build
